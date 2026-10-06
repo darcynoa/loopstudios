@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Alata, Josefin_Sans } from 'next/font/google'
+import Navigation from '../components/Navigation'
 
 const alata = Alata({
   weight: '400',
@@ -25,7 +26,10 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       lang="en"
       className={`${alata.variable} ${josefinSans.variable} h-full bg-black antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+      </body>
     </html>
   )
 }
