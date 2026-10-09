@@ -8,9 +8,8 @@ import HoverAnim from './HoverAnim'
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
 
-
   return (
-    <nav className="fixed z-10 flex w-full items-center justify-between px-6 py-8 lg:px-[17rem] lg:py-[3rem]">
+    <nav className="fixed z-10 flex w-full items-center justify-between px-6 py-8 lg:py-[3rem] xl:px-[17rem]">
       <Image
         className="z-5 w-[9rem]"
         src="/logo.svg"
@@ -18,14 +17,14 @@ export default function Navigation() {
         width={200}
         height={50}
       />
-      <ul className={`w-full lg:w-fit lg:font-body lg:relative lg:flex-row lg:h-full lg:text-[0.875rem] lg:gap-[2rem] lg:pr-[3rem] lg:items-center lg:capitalize lg:px-0 lg:bg-transparent h-screen bg-black text-white absolute top-0 left-0 flex flex-col items-start justify-center font-header text-[2rem] uppercase gap-[1rem] px-6 transition-transform duration-500 ${isMenuOpen ? 'transform translate-x-0' : 'transform translate-x-full'}`}>
+      <ul
+        className={`lg:font-body font-header absolute top-0 left-0 flex h-screen w-full flex-col items-start justify-center gap-[1rem] bg-black px-6 text-[2rem] text-white uppercase transition-transform duration-500 lg:relative lg:h-full lg:w-fit lg:flex-row lg:items-center lg:gap-[2rem] lg:bg-transparent lg:px-0 lg:pr-[3rem] lg:text-[0.875rem] lg:capitalize ${isMenuOpen ? 'translate-x-0 transform' : 'translate-x-full transform'}`}
+      >
         {data.navigation.map((item, index) => {
           return (
             <li key={index}>
               <HoverAnim>
-                <a href={item.href}>
-                  {item.label}
-                </a>
+                <a href={item.href}>{item.label}</a>
               </HoverAnim>
             </li>
           )
