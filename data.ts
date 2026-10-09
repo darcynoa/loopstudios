@@ -39,3 +39,5 @@ export const data = {
     copyright: '© 2021 Loopstudios. All rights reserved.',
   },
 }
+
+export type HeroData = typeof data.hero

@@ -1,20 +1,23 @@
 import Image from 'next/image'
+import type { HeroData } from '@/data'
 
-export default function Hero({ data }: { data: any }) {
+export default function Hero({ data }: { data: HeroData }) {
   return (
-    <section className="relative w-full flex justify-start items-center">
-      <picture className="absolute w-full h-full object-cover">
+    <section className="relative flex w-full items-center justify-start">
+      <picture className="absolute h-full w-full object-cover">
         <source srcSet="/desktop/image-hero.jpg" media="(min-width: 768px)" />
         <Image
           src="/mobile/image-hero.jpg"
           alt="Hero Image"
           width={750}
           height={1300}
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
         />
       </picture>
-      <div className="absolute w-full h-full top-0 left-0 bg-black opacity-40"></div>
-      <h1 className="text-[2.75rem] lg:text-[5rem] w-[90%] lg:w-[60%] max-w-[660px] leading-[1.05] border-white border-2 p-4 lg:p-[2rem] z-3 text-white font-header uppercase mx-6 my-[15rem] xl:mx-[17rem]">{data.title}</h1>
+      <div className="absolute top-0 left-0 h-full w-full bg-black opacity-40"></div>
+      <h1 className="font-header z-3 mx-6 my-[15rem] w-[90%] max-w-[660px] border-2 border-white p-4 text-[2.75rem] leading-[1.05] text-white uppercase lg:w-[60%] lg:p-[2rem] lg:text-[5rem] xl:mx-[17rem]">
+        {data.title}
+      </h1>
     </section>
   )
 }
