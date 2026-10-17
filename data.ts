@@ -41,3 +41,6 @@ export const data = {
 }
 
 export type HeroData = typeof data.hero
+export type BriefData = typeof data.brief
+export type GridData = typeof data.grid
+export type FooterData = typeof data.footer
