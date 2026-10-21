@@ -7,6 +7,7 @@ import HoverAnim from './HoverAnim'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <nav className="fixed z-10 flex w-full items-center justify-between px-6 py-8 lg:py-[3rem] xl:px-[17rem]">
       <Image
@@ -31,7 +32,7 @@ export default function Navigation() {
       </ul>
       <Image
         className="z-5 w-[1.5rem] lg:hidden"
-        src="/icon-hamburger.svg"
+        src={`${isMenuOpen ? '/icon-close.svg' : '/icon-hamburger.svg'}`}
         alt="Hamburger Icon"
         width={50}
         height={50}
