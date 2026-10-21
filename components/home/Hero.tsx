@@ -15,7 +15,7 @@ export default function Hero({ data }: { data: HeroData }) {
         />
       </picture>
       <div className="absolute top-0 left-0 h-full w-full bg-black opacity-40"></div>
-      <h1 className="font-header z-3 mx-6 my-[15rem] w-[90%] max-w-[660px] border-2 border-white p-4 text-[2.75rem] leading-[1.05] text-white uppercase lg:w-[60%] lg:p-[2rem] lg:text-[5rem] xl:mx-[17rem]">
+      <h1 className="font-header z-3 mx-6 my-[15rem] w-[90%] max-w-[660px] border-2 border-white p-4 text-[2.75rem] leading-[1.05] text-white uppercase md:w-[50%] lg:w-[60%] lg:p-[2rem] lg:text-[5rem] xl:mx-[17rem]">
         {data.title}
       </h1>
     </section>
